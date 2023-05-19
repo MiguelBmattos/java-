@@ -1,0 +1,40 @@
+public class Main {
+    public static void main(String[] args) {
+       
+        Pessoa pessoa = new Pessoa("miguel", 20, 5000.0);
+
+        
+        System.out.println("Informações da Pessoa:");
+        System.out.println("Nome: " + pessoa.getNome());
+        System.out.println("Idade: " + pessoa.getIdade());
+        System.out.println("Salário: " + pessoa.getSalario());
+
+        
+        double salarioAnual = pessoa.calcularSalarioAnual();
+        System.out.println("Salário Anual: " + salarioAnual);
+
+       
+        pessoa.aplicarReajuste();
+        System.out.println("Salário depois do Reajuste: " + pessoa.getSalario());
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+       
+        Pessoa pessoa = new Pessoa("miguel", 20, 5000.0);
+
+        
+        System.out.println("Informações da Pessoa:");
+        System.out.println("Nome: " + pessoa.getNome());
+        System.out.println("Idade: " + pessoa.getIdade());
+        System.out.println("Salário: " + pessoa.getSalario());
+
+        
+        double salarioAnual = pessoa.calcularSalarioAnual();
+        System.out.println("Salário Anual: " + salarioAnual);
+
+       
+        pessoa.aplicarReajuste();
+        System.out.println("Salário depois do Reajuste: " + pessoa.getSalario());
+    }
+}
