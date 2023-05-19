@@ -2,15 +2,15 @@ package calcularArea;
 
 public class Teste {
     public static void main(String[] args){
-        AreaCalculavel[] area=new AreaCalculavel[6];
-        area[0]=new Quadrado(8.0);
-        area[1]=new Quadrado(4.0);
-        area[2]=new Retangulo(5.0, 9.0);
-        area[3]=new Retangulo(1.0, 5.0);
-        area[4]=new Circulo(5.0);
-        area[5]=new Circulo(4.5);
+        AreaCalculavel[] areas=new AreaCalculavel[6];
+        areas[0]=new Quadrado(8.0);
+        areas[1]=new Quadrado(4.0);
+        areas[2]=new Retangulo(5.0, 9.0);
+        areas[3]=new Retangulo(1.0, 5.0);
+        areas[4]=new Circulo(5.0);
+        areas[5]=new Circulo(4.5);
 
-        for (AreaCalculavel area : area){
+        for (AreaCalculavel area : areas){
             System.out.println("Área: "+area.calculaArea());
         }
     }
