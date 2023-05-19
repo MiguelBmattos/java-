@@ -1,0 +1,68 @@
+package calcularArea;
+
+public class Teste {
+    public static void main(String[] args){
+        AreaCalculavel[] area=new AreaCalculavel[6];
+        area[0]=new Quadrado(8.0);
+        area[1]=new Quadrado(4.0);
+        area[2]=new Retangulo(5.0, 9.0);
+        area[3]=new Retangulo(1.0, 5.0);
+        area[4]=new Circulo(5.0);
+        area[5]=new Circulo(4.5);
+
+        for (AreaCalculavel area : area){
+            System.out.println("Área: "+area.calculaArea());
+        }
+    }
+}
+
+package calcularArea; 
+
+public interface AreaCalculavel{
+    double calculaArea();
+}
+package calcularArea;
+
+	public class Quadrado implements AreaCalculavel{
+	    private double lado;
+
+	    public Quadrado(double lado){
+	        this.lado=lado;
+	    }
+
+	    @Override
+	    public double calculaArea(){
+	        return lado*lado;
+	    }
+	}
+  package calcularArea; 
+
+public class Retangulo implements AreaCalculavel{
+    private double base;
+    private double altura;
+
+    public Retangulo(double base, double altura){
+        this.base=base;
+        this.altura=altura;
+    }
+
+    @Override
+    public double calculaArea(){
+        return base*altura;
+    }
+}
+package calcularArea; 
+
+public class Circulo implements AreaCalculavel{
+    private double raio;
+    private final double PI=3.14159;
+
+    public Circulo(double raio){
+        this.raio = raio;
+    }
+
+    @Override
+    public double calculaArea(){
+        return PI*raio*raio;
+    }
+}
