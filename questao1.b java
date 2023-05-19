@@ -1,0 +1,28 @@
+public class GerenciadorDeImpostoDeRenda{
+    private double totalTributos;
+
+    public void aderir(Tributavel tributavel){
+        double tributos=tributavel.calcularTributos();
+        totalTributos+=tributos;
+    }
+
+    public double getTotalTributos(){
+        return totalTributos;
+    }
+public static void main(String[] args){
+       
+        ContaCorrente contaCorrente=new ContaCorrente(3000);
+        SeguroDeVida seguroDeVida=new SeguroDeVida(60000);
+
+        
+        GerenciadorDeImpostoDeRenda gerenciador=new GerenciadorDeImpostoDeRenda();
+
+        
+        gerenciador.aderir(contaCorrente);
+        gerenciador.aderir(seguroDeVida);
+
+       
+        double totalTributos=gerenciador.getTotalTributos();
+        System.out.println("Total de Tributos:"+totalTributos);
+    }
+}
