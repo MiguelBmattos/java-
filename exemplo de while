@@ -1,0 +1,11 @@
+public class Main {
+  public static void main(String[] args) {
+    int i = 0;
+    while (i < 11) {
+      System.out.print("9 X "+i);
+      System.out.print(" = ");
+      System.out.println(9*i);
+      i++;
+    }  
+  }
+}
