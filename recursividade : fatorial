@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main {
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.print("Digite um número inteiro positivo ou zero: ");
+ int numero = scanner.nextInt();
+ long resultado = fatorial(numero);
+ System.out.println("O fatorial de " + numero + " é " + resultado);
+scanner.close();
+ }
+ public static long fatorial(int n) {
+ if (n < 2) {
+ return 1;
+ } else {
+ return n * fatorial(n - 1);
+ }
+ }
+}
