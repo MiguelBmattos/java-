@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main{
+  public static void main(String[] args){
+    Scanner scanner=new Scanner(System.in);
+    System.out.print("Digite o número de termos que deseja gerar:");
+    int num=scanner.nextInt();
+    int a=1;
+    int b=1;
+    System.out.println(a);
+    System.out.println(b);
+    long resultado=fibonacci(num);
+    System.out.println(resultado);
+
+    scanner.close();
+  }
+  public static long fibonacci(int n) {
+    if(n==1|n==2){
+      return 1;
+    }
+    long a=1;
+    long b=1;
+    long c=0;
+    for(int i=3;i<=n;i++){
+       c = a+b;
+      System.out.println(c);
+      a=b;
+      b=c;
+      
+    }
+    return c;
+
+  }
+}
