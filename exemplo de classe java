@@ -1,0 +1,29 @@
+public class Aluno {
+    String nome;
+    long matricula;
+    int nota1;
+    int nota2;
+    int nota3;
+    
+
+    int consultaMedia() {
+        return  (nota1 + nota2 + nota3) / 3;
+    }
+
+    
+
+    public static void main(String[] args) {
+      Aluno aluno1 = new Aluno();
+        aluno1.nome = "jão";
+        aluno1.matricula = 202203394207L;
+        aluno1.nota1 = 70;
+        aluno1.nota2 = 90;
+        aluno1.nota3 = 65;
+        
+      
+        
+
+        int media = aluno1.consultaMedia();
+        System.out.println("A média das suas notas é:" + media);
+    }
+}
