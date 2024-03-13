@@ -1,0 +1,27 @@
+public class Cliente {
+    String nome;
+    String email;
+    int conta;
+    float saldo;
+    
+
+    public Cliente(String email, String nome, int conta, float saldo){
+        this.email=email;
+        this.nome=nome;
+        this.conta=conta;
+        this.saldo=saldo;
+    }
+    void realizaSaque(float saque){
+        saldo=saldo-saque;
+    }
+    float consultaSaldo(){
+        return saldo;
+    }
+    public static void main(String[] args){
+        Cliente cliente1=new Cliente("Miguel Boschini", "miguelboschini07@gmail.com", 1123456, 1000000.00f);
+        System.out.println("Cliente 1:" + cliente1.nome+ "Saldo:"+cliente1.saldo);
+        
+        cliente1.realizaSaque(500.00f);
+        System.out.println("Cliente 1:"+cliente1.nome+"Saldo após o saque:"+cliente1.consultaSaldo());
+    }
+}
